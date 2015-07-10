@@ -61,7 +61,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     controller 'routes' do
-      post 'route/create', action: :create
+      get 'route/create', action: :create
       get '/routes', action: :index
     end
   end

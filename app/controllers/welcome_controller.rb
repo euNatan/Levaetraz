@@ -71,7 +71,7 @@ class WelcomeController < ActionController::Base
          value_b << dest
        end
      end
-     
+
 
     end
 

@@ -7,6 +7,8 @@ class Api::RoutesController < ApplicationController
     map.places.create(name: params[:origin]) unless map.places.find_by(name: params[:origin])
     map.places.create(name: params[:destination]) unless map.places.find_by(name: params[:destination])
 
+    render json: "Criado com sucesso"
+
   end
 
   def index
