@@ -1,0 +1,24 @@
+<%= form_tag route_show_path, remote: true , class:"col-md-12" do  %>
+
+  <%= hidden_field_tag :map, @map.id %>
+  <% if @map.places.present? %>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Origem</label>
+      <%= select_tag :origin, options_from_collection_for_select(@map.places, "name", "name") , class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Destino</label>
+      <%= select_tag :destination, options_from_collection_for_select(@map.places, "name", "name") , class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Autonomia</label>
+      <%= text_field_tag :km_l,"", placeholder: "Digite o km/l", class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Preço do combustivel</label>
+      <%= text_field_tag :price,"", placeholder: "Digite o preço do combustivel", class:"form-control" %>
+    </div>
+
+    <button type="submit" class="btn btn-default">Enviar</button>
+  <% end %>
+<% end %>

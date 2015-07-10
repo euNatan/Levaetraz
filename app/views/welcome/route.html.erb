@@ -1,0 +1,30 @@
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">Crie uma nova rota</div>
+    <div class="panel-body">
+      <%= form_tag places_path, remote: true, class:"col-md-12" do  %>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Mapa</label>
+          <%= select_tag :map, options_from_collection_for_select(@maps, "id", "name") , class:"form-control", onchange:"onClick('.show-place');" %>
+          <button type="submit" class="show-place btn btn-primary">Buscar</button>
+        </div>
+      <% end %>
+      <div id="places"></div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">Melhor rota e custo</div>
+    <div class="panel-body">
+      <table class="table table-striped">
+
+          <tr>
+            <td id="result"></td>
+          </tr>
+
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">Crie uma nova rota</div>
+    <div class="panel-body">
+      <%= form_tag create_route_path, class:"col-md-12" do  %>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Mapa</label>
+          <%= text_field_tag :map,"", placeholder: "Digite o nome do mapa", class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Origem</label>
+          <%= text_field_tag :origin,"", placeholder: "Digite a origem", class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Destino</label>
+          <%= text_field_tag :destination,"", placeholder: "Digite o Destino", class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Distancia</label>
+          <%= text_field_tag :distance,"", placeholder: "Digite a distancia entre origem e destino", class:"form-control" %>
+        </div>
+
+        <button type="submit" class="btn btn-default">Enviar</button>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">Mapas e rotas</div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <th>Cidade</th>
+        <th>Numero de rotas salvas</th>
+        <th>Consultar rota mais rapida</th>
+        <% @maps.each do |map| %>
+          <tr>
+            <td><%= map.name %></td>
+            <td><%= map.routes.size %></td>
+            <td><%= link_to "Consultar", route_path() %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
