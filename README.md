@@ -2,7 +2,7 @@
 ##Desafio
 
 
-OEntregando mercadorias
+Entregando mercadorias
 
 A Companhia LevaEtraz está desenvolvendo um novo sistema de logistica e sua ajuda é muito
 
