@@ -81,7 +81,7 @@ Faça uma requisição do tipo GET na url: `/api/routes.json`
 ### Adicionando mapas
 Para adicionar uma rota faça uma requisição do tipo GET na url: `/api/route/create.json` passando os seguintes parâmetros:
 
-  - `map` : nome do mapa, exemplo: New York
+  - `map` : nome do mapa, exemplo: Sao Paulo
   - `origin`: Nome do ponto de origem.
   - `destination`: Nome do ponto de destino
   - `distance`: Distância entre pontos em Km.
